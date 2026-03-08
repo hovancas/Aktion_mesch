@@ -25,7 +25,7 @@ Vsetky dotazniky su v Google Forms. Momentalne je **0 realnych odpovedi** vo vse
 | # | Otazka | Typ odpovede | Mozne hodnoty / Rozsah | Poznamky k spracovaniu |
 |---|--------|-------------|----------------------|----------------------|
 | 0 | Casova peciatka | Automaticka | Datum + cas | Google Forms generuje automaticky. Format moze byt nekonzistentny pri rucnom exporte. |
-| 1 | Uved svoj vek | Nespecifikovane | Predpoklad: volny text ALEBO rozsahy (10-14, 15-18, 19-25, 26-30) | **PROBLEM**: Ak je volny text, respondenti mozu zadat cokoľvek (cislo, text, rozsah). Ak su rozsahy, nie je mozne pocitat priemer/median. Treba overit ci je to dropdown alebo volny text v Google Forms. |
+| 1 | Uved svoj vek | Dropdown | Rozsahy: 10-14, 15-18, 19-25, 26-30 | Kategoricka premenna. Neda sa pocitat priemer/median - len frekvencne tabulky a modus. |
 | 2 | Som | Single choice | Zena, Muz, Nechcem uviest | Kategoricka premenna. Chyba moznost "Ine". |
 | 3 | Uved skolu a mesto | Volny text | - | **PROBLEM**: Skola a mesto su v jednom poli. Pri analyze sa bude musiet manualne parsovat/rozdelit. Ludia mozu pisat v roznom formate ("ZS Kukucinova, Kosice" vs "kosice zs kukucinova"). Takiez nie je jasne ci mesto skoly, alebo odkial pochadzaju. Odporucanie: rozdelit na 2 separatne polia (mesto bydliska?)+ pouzit dropdown pre skoly. |
 | 4 | O com sa podla teba budeme na workshope bavit? | Volny text | - | Exploratory otazka. Vyzaduje kvalitativnu analyzu alebo text coding. |
@@ -37,8 +37,8 @@ Vsetky dotazniky su v Google Forms. Momentalne je **0 realnych odpovedi** vo vse
 | 10 | Ake zmeny pocas puberty prichadzaju a ako sa na ne mozeme pripravit? | Volny text | - | Vedomostna otazka - pouzitelna na meranie PRED/PO. |
 | 11 | Ako mozeme pomoct ludom, ktori v puberte zazivaju tazkosti? | Volny text | - | Vedomostna otazka - pouzitelna na meranie PRED/PO. |
 | 12 | Co by sme mali podla teba robit, aby sme pubertu zvladli v zdravi a pohode? | Volny text | - | Vedomostna otazka - pouzitelna na meranie PRED/PO. |
-| 13-18 | Vyjadri ci a ako suhlasiš s vyrokom: [6 vyrokov] | Likert skala | Predpoklad: Suhlasim - Nesúhlasim (pocet urovni nespecifikovany) | **PROBLEM**: Nie je jasne ci je to 5-bodova, 7-bodova alebo 10-bodova skala. Treba overit v Google Forms. Vyroky: (1) 3 znaky puberty, (2) co je menstruacia, (3) preventivne prehliadky, (4) akne je prirodzeny jav, (5) co je polucia, (6) starostlivost o telo/hygiena. |
-| 19 | Vies na koho sa obratit v skole ak by si mal/a problem? | Single choice | Predpoklad: Ano/Nie/Neviem | Kategoricka premenna. |
+| 13-18 | Vyjadri ci a ako suhlasiš s vyrokom: [6 vyrokov] | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | Vyroky: (1) 3 znaky puberty, (2) co je menstruacia, (3) preventivne prehliadky, (4) akne je prirodzeny jav, (5) co je polucia, (6) starostlivost o telo/hygiena. |
+| 19 | Vies na koho sa obratit v skole ak by si mal/a problem? | Single choice | Ano / Nie / Neviem | Kategoricka premenna. |
 | 20 | Ak ano, kto by to bol | Volny text | - | Conditionalna otazka. |
 | 21 | Chces s nami este nieco zdielat? | Volny text | - | Otvorena, volitelna. |
 
@@ -49,7 +49,7 @@ Vsetky dotazniky su v Google Forms. Momentalne je **0 realnych odpovedi** vo vse
 | # | Otazka | Typ odpovede | Mozne hodnoty / Rozsah | Poznamky k spracovaniu |
 |---|--------|-------------|----------------------|----------------------|
 | 0 | Casova peciatka | Automaticka | Datum + cas | - |
-| 1 | Uved svoj vek | Nespecifikovane | Rovnake ako PRED | Rovnaky problem ako PRED. |
+| 1 | Uved svoj vek | Dropdown | Rozsahy: 10-14, 15-18, 19-25, 26-30 | Rovnake ako PRED. |
 | 2 | Som | Single choice | Zena, Muz, Nechcem uviest | - |
 | 3 | Uved svoju skolu | Volny text | - | **ZMENA OPROTI PRED**: Tu sa pyta LEN skolu, v PRED sa pytalo skolu A mesto. |
 | 4 | Na stupnici od 1 do 10, aky uzitocny bol pre teba workshop? | Numericka skala | 1 (Vobec) - 10 (Velmi) | Ciselna skala. |
@@ -60,7 +60,7 @@ Vsetky dotazniky su v Google Forms. Momentalne je **0 realnych odpovedi** vo vse
 | 9 | Co by sme mali na workshope vylepsit? | Volny text | - | - |
 | 10 | Co ti este chybalo na workshope? | Volny text | - | - |
 | 11-13 | Vedomostne otazky (rovnake ako PRED Q10-12) | Volny text | - | Klucove pre meranie dopadu - porovnanie PRED vs PO. |
-| 14-19 | Vyjadri ci a ako suhlasiš s vyrokom [6 vyrokov - rovnake ako PRED] | Likert skala | Rovnake ako PRED | Klucove pre meranie dopadu - porovnanie PRED vs PO. |
+| 14-19 | Vyjadri ci a ako suhlasiš s vyrokom [6 vyrokov - rovnake ako PRED] | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | Klucove pre meranie dopadu - porovnanie PRED vs PO. |
 | 20 | Chces s nami este nieco zdielat? | Volny text | - | - |
 
 ### Poznamky k parovaniu PRED/PO (Puberta):
@@ -74,7 +74,7 @@ Vsetky dotazniky su v Google Forms. Momentalne je **0 realnych odpovedi** vo vse
 | # | Otazka | Typ odpovede | Mozne hodnoty / Rozsah | Poznamky k spracovaniu |
 |---|--------|-------------|----------------------|----------------------|
 | 0 | Casova peciatka | Automaticka | - | - |
-| 1 | Uved svoj vek | Nespecifikovane | - | Rovnaky problem ako Puberta. |
+| 1 | Uved svoj vek | Dropdown | Rozsahy: 10-14, 15-18, 19-25, 26-30 | Rovnake ako Puberta. |
 | 2 | Som | Single choice | Zena, Muz, Nechcem uviest | - |
 | 3 | Uved skolu a mesto | Volny text | - | Rovnaky problem ako Puberta PRED - jedno pole pre dve info. |
 | 4 | O com sa podla teba budeme na workshope bavit? | Volny text | - | - |
@@ -86,10 +86,10 @@ Vsetky dotazniky su v Google Forms. Momentalne je **0 realnych odpovedi** vo vse
 | 10 | Co vsetko podla teba pod sexualne a reprodukcne zdravie spada? | Volny text | - | Vedomostna - pre PRED/PO porovnanie. |
 | 11 | Ake su podla teba sexualne a reprodukcne prava? | Volny text | - | Vedomostna - pre PRED/PO porovnanie. |
 | 12 | Ako a s kym sa podla teba bezny clovek potrebuje rozpravat o SRZ? | Volny text | - | Vedomostna - pre PRED/PO porovnanie. |
-| 13-18 | Vyjadri ci suhlasiš s vyrokom [6 vyrokov] | Likert skala | Nespecifikovany rozsah | Vyroky: (1) poznam zakladne prava SRZ, (2) starostlivost o reprodukcne organy, (3) ochrana pred nechcenym otehotnenim/STI, (4) samovysetrenie prsnikov/semennikov, (5) preventivne prehliadky gynekologia/urologia, (6) pomenovanie pohlavnych organov. |
-| 19 | Vies na koho sa obratit v skole ak by si mal/a problem? | Single choice | Predpoklad: Ano/Nie/Neviem | - |
+| 13-18 | Vyjadri ci suhlasiš s vyrokom [6 vyrokov] | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | Vyroky: (1) poznam zakladne prava SRZ, (2) starostlivost o reprodukcne organy, (3) ochrana pred nechcenym otehotnenim/STI, (4) samovysetrenie prsnikov/semennikov, (5) preventivne prehliadky gynekologia/urologia, (6) pomenovanie pohlavnych organov. |
+| 19 | Vies na koho sa obratit v skole ak by si mal/a problem? | Single choice | Ano / Nie / Neviem | - |
 | 20 | Ak ano, kto by to bol | Volny text | - | - |
-| 21 | Myslis si ze tvoja skola ma postupy ako riesit ublizujuce spravanie? | Single choice | Predpoklad: Ano/Nie/Neviem | Otazka navyse oproti Puberte. |
+| 21 | Myslis si ze tvoja skola ma postupy ako riesit ublizujuce spravanie? | Single choice | Ano / Nie / Neviem | Otazka navyse oproti Puberte. |
 | 22 | Chces s nami este nieco zdielat? | Volny text | - | - |
 
 ---
@@ -99,7 +99,7 @@ Vsetky dotazniky su v Google Forms. Momentalne je **0 realnych odpovedi** vo vse
 | # | Otazka | Typ odpovede | Mozne hodnoty / Rozsah | Poznamky k spracovaniu |
 |---|--------|-------------|----------------------|----------------------|
 | 0 | Casova peciatka | Automaticka | - | - |
-| 1 | Uved svoj vek | Nespecifikovane | - | - |
+| 1 | Uved svoj vek | Dropdown | Rozsahy: 10-14, 15-18, 19-25, 26-30 | - |
 | 2 | Som | Single choice | - | - |
 | 3 | Uved svoju skolu | Volny text | - | **ZMENA**: Opat len skola, bez mesta (PRED ma oboje). |
 | 4 | Na stupnici 1-10 aky uzitocny bol workshop? | Numericka skala | 1-10 | - |
@@ -110,7 +110,7 @@ Vsetky dotazniky su v Google Forms. Momentalne je **0 realnych odpovedi** vo vse
 | 9 | Co by sme mali vylepsit? | Volny text | - | - |
 | 10 | Co ti chybalo na workshope? | Volny text | - | - |
 | 11-13 | Vedomostne otazky (rovnake ako PRED Q10-12) | Volny text | - | Pre PRED/PO porovnanie. |
-| 14-19 | Vyjadri ci suhlasiš s vyrokom [6 vyrokov - rovnake ako PRED] | Likert skala | Nespecifikovany rozsah | Pre PRED/PO porovnanie. |
+| 14-19 | Vyjadri ci suhlasiš s vyrokom [6 vyrokov - rovnake ako PRED] | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | Pre PRED/PO porovnanie. |
 | 20 | Chces s nami este nieco zdielat? | Volny text | - | - |
 
 ### Poznamky k parovaniu PRED/PO (SRZ):
@@ -137,18 +137,18 @@ Vsetky dotazniky su v Google Forms. Momentalne je **0 realnych odpovedi** vo vse
 | 12 | Ake menstruacne pomocky pouzivate? | Volny text | - | **PROBLEM**: Malo by byt multiple choice (vlozky, tampony, kalisok, menstruacne nohavicky, atd.) + "Ine (vypisete)". Volny text bude velmi tazko kvantifikovatelny. |
 | 13 | Absolvovali ste niekedy vzdelavanie o pohlavnom zdravi? | Volny text | - | **PROBLEM**: Kombinuje Ano/Nie otazku s popisom v jednom poli. Malo by byt rozdelene na: (1) Ano/Nie, (2) Ak ano, popisete. |
 | 14 | Ake zdroje by vam v teme menstruacie najviac pomohli? | Volny text | - | - |
-| 15 | Je pre mna narocne hovorit o genitalich a ich funkciach | Likert skala | Predpoklad: 1-10 alebo Suhlasim-Nesuhlasim | **MERANIE DOPADU**: Tieto otazky (15-26) su klucove pre PRED/PO porovnanie postojov a vedomosti. |
-| 16 | Je pre mna narocne vysvetlit menstruaciu | Likert skala | Predpoklad: 1-10 | - |
-| 17 | Viem vysvetlit zakladne informacie o menstruacii | Likert skala | Predpoklad: 1-10 | - |
-| 18 | Tema menstruacie je cisto pre dievcata/zeny | Likert skala | Predpoklad: 1-10 | Mytus/postoj - meranie stereotypov. |
-| 19 | O menstruacii by sme sa nemali rozpravat (nahlas) | Likert skala | Predpoklad: 1-10 | Mytus/postoj - meranie stigmy. |
-| 20 | Momentalne viem uprimne a otvorene komunikovat s mojim dietatom | Likert skala | Predpoklad: 1-10 | - |
-| 21 | Pocas menstruacie nie je mozne otehotniet | Likert skala | Predpoklad: 1-10 | Mytus - obratene skorovanie |
-| 22 | Pocas menstruacie sa nemoze cvicit ci plavat | Likert skala | Predpoklad: 1-10 | Mytus - obratene skorovanie. |
-| 23 | Pocas jednej menstruacie clovek strati viac ako pol litra krvi | Likert skala | Predpoklad: 1-10 | Mytus - obratene skorovanie |
-| 24 | Tampon alebo kalisok sa mozu vo vagine stratit | Likert skala | Predpoklad: 1-10 | Mytus - obratene skorovanie. |
-| 25 | Za menstruaciu by sme sa mali hanbit | Likert skala | Predpoklad: 1-10 | Mytus - obratene skorovanie. |
-| 26 | Predmenstruacny syndrom (PMS) je mytus | Likert skala | Predpoklad: 1-10 | Mytus - obratene skorovanie. |
+| 15 | Je pre mna narocne hovorit o genitalich a ich funkciach | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | **MERANIE DOPADU**: Tieto otazky (15-26) su klucove pre PRED/PO porovnanie postojov a vedomosti. |
+| 16 | Je pre mna narocne vysvetlit menstruaciu | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | - |
+| 17 | Viem vysvetlit zakladne informacie o menstruacii | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | - |
+| 18 | Tema menstruacie je cisto pre dievcata/zeny | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | Mytus/postoj - meranie stereotypov. |
+| 19 | O menstruacii by sme sa nemali rozpravat (nahlas) | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | Mytus/postoj - meranie stigmy. |
+| 20 | Momentalne viem uprimne a otvorene komunikovat s mojim dietatom | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | - |
+| 21 | Pocas menstruacie nie je mozne otehotniet | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | Mytus - obratene skorovanie |
+| 22 | Pocas menstruacie sa nemoze cvicit ci plavat | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | Mytus - obratene skorovanie. |
+| 23 | Pocas jednej menstruacie clovek strati viac ako pol litra krvi | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | Mytus - obratene skorovanie |
+| 24 | Tampon alebo kalisok sa mozu vo vagine stratit | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | Mytus - obratene skorovanie. |
+| 25 | Za menstruaciu by sme sa mali hanbit | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | Mytus - obratene skorovanie. |
+| 26 | Predmenstruacny syndrom (PMS) je mytus | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | Mytus - obratene skorovanie. |
 
 ---
 
@@ -163,11 +163,11 @@ Vsetky dotazniky su v Google Forms. Momentalne je **0 realnych odpovedi** vo vse
 | 4 | Na workshope som mohol/mohla otvorene zdielat svoje nazory | Numericka skala | 1-10 | - |
 | 5 | V ramci vzdelavania ma najviac prekvapilo... | Volny text | - | - |
 | 6 | Z workshopu si odnasam najma... | Volny text | - | - |
-| 7-10 | Po absolvovani workshopu mozem o sebe prehlasit ze: [4 vyroky] | Likert skala | Predpoklad: 1-10 | Vyroky: (1) viesť diskusiu o puberte, (2) rozpravat o menstruacii, (3) tvorit bezpecie, (4) hovorit o genitalich. |
+| 7-10 | Po absolvovani workshopu mozem o sebe prehlasit ze: [4 vyroky] | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | Vyroky: (1) viesť diskusiu o puberte, (2) rozpravat o menstruacii, (3) tvorit bezpecie, (4) hovorit o genitalich. |
 | 11 | Na workshope mi este chybalo... | Volny text | - | - |
 | 12 | Co by sme mohli vylepsit? | Volny text | - | - |
-| 13-18 | Facilitatorky workshopu podavali informacie: [6 aspektov] | Likert skala | Predpoklad: 1-10 | Hodnotenie lektoriek. |
-| 19 | Pristup a praca facilitatoriek bola professionalna | Numericka skala | Predpoklad: 1-10 | - |
+| 13-18 | Facilitatorky workshopu podavali informacie: [6 aspektov] | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | Hodnotenie lektoriek. |
+| 19 | Pristup a praca facilitatoriek bola professionalna | Numericka skala | 1-10 | - |
 | 20 | Ako a co by mohli facilitatorky vylepsit? | Volny text | - | - |
 | 21 | Kratke doporucenie na propagaciu workshopu | Volny text | - | Nie je analyticka premenna, marketingovy ucel. |
 | 22 | Chcete s nami este nieco zdielat? | Volny text | - | - |
@@ -184,20 +184,20 @@ Vsetky dotazniky su v Google Forms. Momentalne je **0 realnych odpovedi** vo vse
 |---|--------|-------------|----------------------|----------------------|
 | 0 | Casova peciatka | Automaticka | - | - |
 | 1 | E-mailova adresa | Automaticka | - | **VOLITELNE**: Dospeli si mozu zvolit ci uvedu email alebo zostavaju anonymni. Ak uvedeny, umoznuje parovanie PRED/PO. |
-| 2 | Som | Single choice | Zena/Muz/Ine | - |
+| 2 | Som | Single choice | Zena / Muz / Intersex / Nechcem uviest | - |
 | 3 | Vas vek | Volny text | - | Rovnaky problem s volnym textom. |
 | 4 | Kraj v ktorom sa nachadzam | Single choice / Dropdown | 8 krajov SR | Dobre strukturovane. |
-| 5 | Najvyssie dosiahnuté vzdelanie | Single choice | SŠ, VŠ Bc, VŠ Mgr/Ing, PhD | - |
-| 6 | Vasa pracovna pozicia | Volny text / Single choice | - | - |
-| 7 | O inovacnom vzdelavani som sa dozvedel/a z/od | Single choice / Multiple choice | - | - |
+| 5 | Najvyssie dosiahnuté vzdelanie | Single choice | SS bez maturity / SS s maturitou / VS 1. stupna / VS 2. stupna / PhD | - |
+| 6 | Vasa pracovna pozicia | Multiple choice | Viacero moznosti | - |
+| 7 | O inovacnom vzdelavani som sa dozvedel/a z/od | Multiple choice | Viacero moznosti | Pri exporte vyzaduje one-hot encoding. |
 | 8 | Preco je pre vas dolezita vztahova a sexualna vychova? | Volny text | - | - |
-| 9 | Mate skusenosti s pracou s detmi/mladezou v temach VSV? | Single choice | Ano/Nie | - |
+| 9 | Mate skusenosti s pracou s detmi/mladezou v temach VSV? | Single choice | Ano / Nie | - |
 | 10 | Ak ano, ake skusenosti + najvacsia vyzva? | Volny text | - | Conditionalna. Kombinuje 2 otazky v jednej - tazke na analyzu. |
-| 11-15 | Pred absolvovanim vzdelavania mozem o sebe prehlasit ze: [5 vyrokov] | Likert skala | 1-10 | Vyroky: (1) viest diskusiu o vztahoch/sexualite, (2) hovorit o suhlase, (3) riesit krizove situacie, (4) vekovo adekvátne info, (5) tvorit bezpecne prostredie. **Klucove pre PRED/PO porovnanie.** |
+| 11-15 | Pred absolvovanim vzdelavania mozem o sebe prehlasit ze: [5 vyrokov] | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | Vyroky: (1) viest diskusiu o vztahoch/sexualite, (2) hovorit o suhlase, (3) riesit krizove situacie, (4) vekovo adekvátne info, (5) tvorit bezpecne prostredie. **Klucove pre PRED/PO porovnanie.** |
 | 16-24 | Vyjadrite uroven zrucnosti 1-10: [9 zrucnosti] | Numericka skala | 1 (najmenej sebaisto) - 10 (velmi sebaisto) | Zrucnosti: vysvetlovanie, recovy prejav, instrukcie, vedomosti, cas, spolupraca, vlastne postoje, reflexia predsudkov, praca so skupinou. **Klucove pre PRED/PO porovnanie.** |
 | 25 | Najdolezitejsia pridana hodnota lektora? | Volny text | - | - |
 | 26 | Kedy hodnotite WS ako uspesny? | Volny text | - | - |
-| 27 | Monitorujete progres vasich zrucnosti? | Single choice | Predpoklad: Ano/Nie | - |
+| 27 | Monitorujete progres vasich zrucnosti? | Single choice | Ano / Nie | - |
 | 28 | Ak ano, podla coho viete ze sa posuvate? | Volny text | - | Conditionalna. |
 | 29 | Co vas motivovalo k prihlaseniu? | Volny text | - | - |
 | 30 | V akych oblastiach by ste chceli uplatnit zrucnosti? | Volny text | - | - |
@@ -217,16 +217,16 @@ Vsetky dotazniky su v Google Forms. Momentalne je **0 realnych odpovedi** vo vse
 | 4 | Moje ocakavania boli naplnene | Numericka skala | 1-10 | - |
 | 5 | Najviac ma prekvapilo... | Volny text | - | - |
 | 6 | Zo vzdelavania si odnasam... | Volny text | - | - |
-| 7-10 | Po absolvovani vzdelavania mozem o sebe prehlasit ze: [4 vyroky] | Likert skala | Predpoklad: 1-10 | **PROBLEM**: PRED ma 5 vyrokov (Q11-15), PO ma len 4 (Q7-10). Vyrok o "bezpecnom prostredi" z PRED chyba v PO. Neda sa plne porovnat. |
-| 11-16 | V tychto oblastiach sa chcem zlepsovat: [6 oblasti] | Checkbox / Multiple choice | Predpoklad: zakmitnutie = ano | Oblasti: vysvetlovanie, recovy prejav, faktografia, cas, spolupraca, vlastne postoje. **PROBLEM**: V PRED je 9 zrucnosti na skale 1-10, v PO je 6 oblasti ako checkboxy. Uplne iny format - neda sa priamo porovnat! |
-| 17-19 | Organizacna stranka vzdelavania: [3 aspekty] | Likert skala | Predpoklad: 1-10 | Evaluacne, nie pre PRED/PO porovnanie. |
+| 7-10 | Po absolvovani vzdelavania mozem o sebe prehlasit ze: [4 vyroky] | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | **PROBLEM**: PRED ma 5 vyrokov (Q11-15), PO ma len 4 (Q7-10). Vyrok o "bezpecnom prostredi" z PRED chyba v PO. Neda sa plne porovnat. |
+| 11-16 | V tychto oblastiach sa chcem zlepsovat: [6 oblasti] | Checkbox / Multiple choice | Zakmitnutie = ano | Oblasti: vysvetlovanie, recovy prejav, faktografia, cas, spolupraca, vlastne postoje. **PROBLEM**: V PRED je 9 zrucnosti na skale 1-10, v PO je 6 oblasti ako checkboxy. Uplne iny format - neda sa priamo porovnat! |
+| 17-19 | Organizacna stranka vzdelavania: [3 aspekty] | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | Evaluacne, nie pre PRED/PO porovnanie. |
 | 20 | Na vzdelavani sa mi pacilo | Volny text | - | - |
 | 21 | Na vzdelavani sa mi nepacilo | Volny text | - | - |
 | 22 | Co by sme mohli vylepsit? | Volny text | - | - |
-| 23 | Pristup a praca facilitatoriek bola professionalna | Numericka skala | Predpoklad: 1-10 | - |
-| 24-28 | Facilitatorky podavali informacie: [5 aspektov] | Likert skala | Predpoklad: 1-10 | - |
+| 23 | Pristup a praca facilitatoriek bola professionalna | Numericka skala | 1-10 | - |
+| 24-28 | Facilitatorky podavali informacie: [5 aspektov] | Likert skala (5-bodova) | Uplne suhlasim / Suhlasim / Skor suhlasim / Nesuhlasim / Uplne nesuhlasim | - |
 | 29 | Co by mohli facilitatorky vylepsit? | Volny text | - | - |
-| 30 | Mam chut spolupracovat s InTYMYtou | Numericka skala / Single choice | Predpoklad: 1-10 alebo Ano/Nie | - |
+| 30 | Mam chut spolupracovat s InTYMYtou | Numericka skala | 1-10 | - |
 | 31 | Mam konkretny napad na spolupracu | Volny text | - | - |
 | 32 | V buducnosti by som sa chcel/a venovat cielovej skupine | Multiple choice | Viacero moznosti | - |
 | 33 | Datum a miesto narodenia (certifikat) | Volny text | - | Administrativny ucel. |
@@ -243,13 +243,13 @@ Vsetky dotazniky su v Google Forms. Momentalne je **0 realnych odpovedi** vo vse
 ### 1. Nekonzistentnost veku napriec dotaznikmi
 | Dotaznik | Format veku |
 |----------|------------|
-| Puberta PRED/PO | Nespecifikovane (mozno rozsahy 10-14, 15-18...) |
+| Puberta PRED/PO | Dropdown s rozsahmi (10-14, 15-18, 19-25, 26-30) |
+| SRZ PRED/PO | Dropdown s rozsahmi (10-14, 15-18, 19-25, 26-30) |
 | Rodicia PRED | Volny text |
 | Ucitelia PRED | Volny text |
-| SRZ PRED/PO | Nespecifikovane |
 
-**Dopad**: Neda sa jednotne analyzovat vekova distribucia. Rozsahy neumoznuju priemer/median.
-**Riesenie v Google Forms**: Pouzit "Short answer" s response validation (Number, between X and Y).
+**Dopad**: Deti maju rozsahy (neda sa pocitat priemer/median), dospeli maju volny text (nekonzistentne odpovede). Rozne formaty napriec skupinami.
+**Riesenie v Google Forms**: Pre dospelych pouzit "Short answer" s Number validation. Pre deti zvazit zmenu na konkretny vek namiesto rozsahov.
 
 ### 2. Nekonzistentne otazky medzi PRED a PO
 | Skupina | Problem |
